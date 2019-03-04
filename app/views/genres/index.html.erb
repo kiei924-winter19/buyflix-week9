@@ -1,0 +1,15 @@
+<div class="row">
+  <% for genre in @genres %>
+    <div class="col-sm-3 mt-3">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-body">
+          <h5 class="card-title"><%= genre.name %></h5>
+          <a class="btn btn-success" href="/genres/<%= genre.id %>/edit">Edit</a>
+          <a class="btn btn-danger" href="/genres/<%= genre.id %>" data-method="delete" data-confirm="Are you sure?">Delete</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<p class="mt-3"><a class="btn btn-primary" href="/genres/new">New Genre</a></p>
